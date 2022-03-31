@@ -1,18 +1,40 @@
-## Getting Started
+# task 01
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## task description
 
-## Folder Structure
+Create a program, which will generate crossword puzzle.
 
-The workspace contains two folders by default, where:
+The program will work with any word list, e.g.:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+https://raw.githubusercontent.com/dwyl/english-words/master/words.zip
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+It will read the word list into a dynamic data structure, ideally a dynamic array.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Then it will select random word from the word list. This word will be the "solution".
 
-## Dependency Management
+Let's suppose the solution word has N characters.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+So your program will then select another N random words, each containing another character from solution.
+
+These words will be used as rows in your crossword puzzle.
+
+Example:
+
+
+
+This is a crossword - complete solution.
+
+   |a|way
+key|b|oard
+  p|o|ke
+  s|u|n
+   |t|ime
+
+You can think also about generating the final form of the crossword, which would look like this:
+
+   |.|...  to or at a distance from a particular place, person, or thing.
+...|.|.... a panel of keys that operate a computer or typewriter.
+  .|.|..    (etc.)
+  .|.|.
+   |.|...
+
